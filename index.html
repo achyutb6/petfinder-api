@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope, $http) {
+        // console.log('connected');
+        $http.get('http://localhost:3000/products/productList').then(function (response) {
+            console.log(response);
+            $scope.prods = response.data;
+        });
+    });    
+</script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+    <table>
+        <thead>
+
+        </thead>
+        <tbody>
+            <tr ng-repeat="prod in prods">
+                <td>{{prod.productId}}</td>
+                <td>{{prod.productName}}</td>
+                <td>{{prod.productCategory}}</td>
+                <td>{{prod.productPrice}}</td>
+                <td>{{prod.productDoc}}</td>
+                <td>{{prod.productSellDate}}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

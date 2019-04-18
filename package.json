@@ -1,0 +1,26 @@
+{
+  "name": "services",
+  "version": "1.0.0",
+  "description": "Trial Services with nodejs for petfinder",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "Achyut Bhandiwad",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "form-data": "^2.3.2",
+    "multer": "^1.3.0",
+    "mysql": "^2.15.0"
+  }
+}
