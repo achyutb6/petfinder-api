@@ -19,11 +19,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 var router = express.Router();
-var connection = mysql.createConnection({
+var connection = mysql.createPool({
     host: 'us-cdbr-iron-east-02.cleardb.net',
     user: 'b6f017c0866ed2',
     password: '3c07d231',
-    database: 'heroku_b9ad136c5d2fbf3'
+    database: 'heroku_b9ad136c5d2fbf3',
 });
 connection.connect();
 
