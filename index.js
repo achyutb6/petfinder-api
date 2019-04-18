@@ -20,10 +20,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 var router = express.Router();
 var connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'root',
-    database: 'petfinder'
+    host: 'us-cdbr-iron-east-02.cleardb.net',
+    user: 'b6f017c0866ed2',
+    password: '3c07d231',
+    database: 'heroku_b9ad136c5d2fbf3'
 });
 connection.connect();
 
