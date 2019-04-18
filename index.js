@@ -34,7 +34,7 @@ app.use(function(request, result, next) {
     next();
 });
 
-app.listen(3000, () => {
+app.listen((process.env.PORT ||3000), () => {
     console.log(`https://localhost:3000`);
 });
 
